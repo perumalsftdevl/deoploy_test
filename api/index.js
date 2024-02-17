@@ -21,7 +21,7 @@ mongoose
 const app = Express();
 app.use(
   cors({
-    origin: "*",
+    origin: "https://perumalsftdevl-deployment-realestate-mern.onrender.com",
     credentials: true,
   })
 );
