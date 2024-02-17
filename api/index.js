@@ -21,11 +21,9 @@ mongoose
 const app = Express();
 
 // enabling CORS for some specific origins only.
+// enabling CORS for some specific origins only.
 let corsOptions = {
-  origin: [
-    "http://localhost:5173",
-    "https://perumalsftdevl-deployment-realestate-mern.onrender.com",
-  ],
+  origin: ["http://localhost:5173", "https://real-estate-iupy.vercel.app/"],
   credentials: true,
 };
 
