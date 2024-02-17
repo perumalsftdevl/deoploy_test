@@ -36,8 +36,8 @@ app.use(Express.urlencoded({ extended: true }));
 app.use(Express.json());
 app.use(cookieParser());
 
-app.listen(3001, () => {
-  console.log("server running on port 3001  ");
+app.listen(5001, () => {
+  console.log("server running on port 5001  ");
 });
 app.get("/", (req, res) => {
   return res.json({ message: "hello" });
