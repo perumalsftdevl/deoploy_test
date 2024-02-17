@@ -19,12 +19,17 @@ mongoose
   });
 
 const app = Express();
-app.use(
-  cors({
-    origin: "https://perumalsftdevl-deployment-realestate-mern.onrender.com",
-    credentials: true,
-  })
-);
+
+// enabling CORS for some specific origins only.
+let corsOptions = {
+  origin: [
+    "http://localhost:5173",
+    "https://perumalsftdevl-deployment-realestate-mern.onrender.com",
+  ],
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 
 const __dirname = path.resolve();
 // app.use(Express.static(path.join(__dirname, "/client/dist")));
