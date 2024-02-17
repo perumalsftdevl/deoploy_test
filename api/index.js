@@ -39,7 +39,9 @@ app.use(cookieParser());
 app.listen(3001, () => {
   console.log("server running on port 3001  ");
 });
-
+app.get("/", (req, res) => {
+  return res.json({ message: "hello" });
+});
 app.use("/User", UserRouter);
 app.use("/Auth", authRoute);
 app.use("/List", ListingRouter);
